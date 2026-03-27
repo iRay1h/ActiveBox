@@ -610,3 +610,314 @@ img {
 .footer-credits a {
     color: rgba(255,255,255,0.6);
 }
+
+
+
+
+
+
+
+/* =====================
+   MEDIA QUERIES
+   ===================== */
+
+
+
+
+
+
+
+
+   
+/* 921–1279 */
+@media (max-width: 1279px) {
+    .navbar {
+        padding: 18px 40px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .features {
+        padding: 60px 40px;
+    }
+    .team {
+        padding: 60px 40px;
+    }
+    .footer {
+        padding: 50px 40px 30px 40px;
+    }
+}
+
+/* 769–920 */
+@media (max-width: 920px) {
+    .navbar {
+        padding: 16px 30px;
+    }
+    .navbar-links {
+        gap: 0 16px;
+    }
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    .features {
+        padding: 60px 30px;
+    }
+    .features-grid {
+        grid-template-areas:
+            "f1 f2"
+            "f3 f4"
+            "f5 f6";
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolio {
+        grid-template-areas:
+            "p1 p2"
+            "p3 p4"
+            "p5 p6"
+            "p7 p8";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 200px);
+    }
+    .team {
+        padding: 60px 30px;
+    }
+    .team-grid {
+        grid-template-areas:
+            "m1 m2"
+            "m3 m4";
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .testimonial-quote blockquote {
+        font-size: 18px;
+    }
+    .footer {
+        padding: 40px 30px 20px 30px;
+    }
+    .footer-top {
+        grid-template-areas:
+            "location about"
+            "share share";
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-about {
+        justify-items: start;
+        text-align: left;
+    }
+    .footer-share {
+        justify-items: start;
+        text-align: left;
+    }
+    .footer-social-icons {
+        justify-content: start;
+    }
+}
+
+/* 481–768 */
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-areas:
+            "logo menu-btn"
+            "nav-links nav-links";
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto 0px;
+        padding: 16px 20px;
+        overflow: hidden;
+        transition: grid-template-rows 0.3s;
+    }
+    .navbar.open {
+        grid-template-rows: auto auto;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .navbar-links {
+        grid-area: nav-links;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s;
+        background-color: #2c3349;
+        margin: 0 -20px;
+        padding: 0 20px;
+    }
+    .navbar.open .navbar-links {
+        max-height: 300px;
+        padding: 10px 20px 16px;
+    }
+    .navbar-links li a {
+        display: block;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .hero {
+        grid-template-rows: 100px 1fr 60px;
+    }
+    .hero-content h1 {
+        font-size: 26px;
+    }
+    .hero-content p {
+        font-size: 13px;
+    }
+    .features {
+        padding: 50px 20px;
+    }
+    .features-grid {
+        grid-template-areas:
+            "f1 f2"
+            "f3 f4"
+            "f5 f6";
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+    .portfolio {
+        grid-template-areas:
+            "p1 p2"
+            "p3 p4"
+            "p5 p6"
+            "p7 p8";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 180px);
+    }
+    .team {
+        padding: 50px 20px;
+    }
+    .team-grid {
+        grid-template-areas:
+            "m1 m2"
+            "m3 m4";
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    .testimonial {
+        grid-template-areas:
+            "photo"
+            "quote";
+        grid-template-columns: 1fr;
+    }
+    .testimonial-photo img {
+        height: 220px;
+    }
+    .testimonial-quote {
+        padding: 40px 30px;
+    }
+    .testimonial-quote blockquote {
+        font-size: 18px;
+    }
+    .cta h2 {
+        font-size: 22px;
+    }
+    .footer {
+        padding: 40px 20px 20px 20px;
+    }
+    .footer-top {
+        grid-template-areas:
+            "location"
+            "share"
+            "about";
+        grid-template-columns: 1fr;
+    }
+    .footer-about {
+        justify-items: start;
+        text-align: left;
+    }
+    .footer-share {
+        justify-items: start;
+        text-align: left;
+    }
+    .footer-social-icons {
+        justify-content: start;
+    }
+    .footer-bottom {
+        grid-template-areas:
+            "copy"
+            "credits";
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .footer-credits {
+        text-align: left;
+    }
+}
+
+/* 352–480 */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 14px 16px;
+    }
+    .navbar-logo img {
+        height: 18px;
+    }
+    .navbar.open .navbar-links {
+        padding: 8px 16px 14px;
+    }
+    .hero {
+        grid-template-rows: 90px 1fr 50px;
+        min-height: 320px;
+    }
+    .hero-content h1 {
+        font-size: 22px;
+    }
+    .hero-content p {
+        font-size: 12px;
+    }
+    .features {
+        padding: 40px 16px;
+    }
+    .features-grid {
+        grid-template-areas:
+            "f1"
+            "f2"
+            "f3"
+            "f4"
+            "f5"
+            "f6";
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .portfolio {
+        grid-template-areas:
+            "p1"
+            "p2"
+            "p3"
+            "p4"
+            "p5"
+            "p6"
+            "p7"
+            "p8";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 200px);
+    }
+    .team {
+        padding: 40px 16px;
+    }
+    .team-grid {
+        grid-template-areas:
+            "m1"
+            "m2"
+            "m3"
+            "m4";
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .testimonial-quote blockquote {
+        font-size: 16px;
+    }
+    .testimonial-quote {
+        padding: 36px 20px;
+    }
+    .cta {
+        padding: 50px 16px;
+    }
+    .cta h2 {
+        font-size: 20px;
+    }
+    .footer {
+        padding: 36px 16px 20px 16px;
+    }
+    .footer-bottom {
+        grid-template-areas:
+            "copy"
+            "credits";
+        grid-template-columns: 1fr;
+    }
+}
